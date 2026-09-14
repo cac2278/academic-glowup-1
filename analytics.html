@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Academic Glow-Up — Local Analytics</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#f3efe6;color:#151713;margin:0;padding:40px}
+main{max-width:1000px;margin:auto;background:#fffdf8;padding:30px;border:1px solid #ccc5ba}
+h1{font-family:Georgia,serif;font-size:48px;margin:.2em 0}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}
+.card{background:#ebe5d9;padding:18px}.card strong{font-size:28px;display:block}
+button{padding:12px 16px;border:0;background:#151713;color:white;font-weight:700;cursor:pointer;margin-right:8px}
+table{width:100%;border-collapse:collapse;margin-top:24px;font-size:13px}th,td{border-bottom:1px solid #ddd;padding:8px;text-align:left}
+.note{color:#666;line-height:1.5}.danger{background:#8a3f34}
+@media(max-width:700px){.cards{grid-template-columns:1fr 1fr}body{padding:15px}}
+</style>
+</head>
+<body>
+<main>
+<div style="font-size:12px;letter-spacing:.15em;font-weight:800">ACADEMIC GLOW-UP ✦</div>
+<h1>Local analytics</h1>
+<p class="note">This page reads anonymous events stored in this browser only. It is useful for testing or as a backup. For persistent program analytics across devices/sessions, configure the Google Apps Script endpoint.</p>
+<div class="cards">
+  <div class="card"><strong id="starts">0</strong><span>quiz starts</span></div>
+  <div class="card"><strong id="completions">0</strong><span>completions</span></div>
+  <div class="card"><strong id="emails">0</strong><span>email sends/intents</span></div>
+  <div class="card"><strong id="resources">0</strong><span>resource clicks</span></div>
+</div>
+<button id="download">EXPORT CSV</button>
+<button id="refresh">REFRESH</button>
+<button id="clear" class="danger">CLEAR LOCAL DATA</button>
+<table>
+<thead><tr><th>Result</th><th>Completions</th></tr></thead>
+<tbody id="results-body"></tbody>
+</table>
+</main>
+<script>
+const KEY="academicGlowUpEventLog_v2";
+function rows(){return JSON.parse(localStorage.getItem(KEY)||"[]")}
+function render(){
+ const data=rows();
+ const count=e=>data.filter(x=>x.event===e).length;
+ document.getElementById("starts").textContent=count("quiz_started");
+ document.getElementById("completions").textContent=count("quiz_completed");
+ document.getElementById("emails").textContent=count("email_sent")+count("email_mailto_fallback");
+ document.getElementById("resources").textContent=count("resource_clicked");
+ const counts={};
+ data.filter(x=>x.event==="quiz_completed").forEach(x=>counts[x.result]=(counts[x.result]||0)+1);
+ document.getElementById("results-body").innerHTML=Object.entries(counts).map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join("")||"<tr><td colspan=2>No completions yet.</td></tr>";
+}
+document.getElementById("download").onclick=()=>{
+ const data=rows(); if(!data.length)return;
+ const keys=[...new Set(data.flatMap(Object.keys))];
+ const esc=v=>`"${String(v??"").replaceAll('"','""')}"`;
+ const csv=[keys.map(esc).join(","),...data.map(r=>keys.map(k=>esc(r[k])).join(","))].join("\n");
+ const blob=new Blob([csv],{type:"text/csv"}); const a=document.createElement("a");
+ a.href=URL.createObjectURL(blob);a.download="academic-glow-up-local-analytics.csv";a.click();URL.revokeObjectURL(a.href);
+};
+document.getElementById("refresh").onclick=render;
+document.getElementById("clear").onclick=()=>{if(confirm("Clear all local analytics from this browser?")){localStorage.removeItem(KEY);render();}};
+render();
+</script>
+</body>
+</html>

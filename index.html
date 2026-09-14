@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffd8ec" />
+  <title>Your Academic Reset Glow-Up | Lenox Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <main class="app-shell">
+    <section class="experience" aria-live="polite">
+      <header class="brand-row">
+        <div class="brand-lockup">
+          <span class="parent-brand">GARY J. LENOX LIBRARY</span>
+          <div class="brand-mark">ACADEMIC GLOW-UP <span>✦</span></div>
+        </div>
+        <div class="brand-meta"><span>01</span><span>SEMESTER RESET</span></div>
+      </header>
+
+      <section id="start-screen" class="screen active start-screen">
+        <div class="start-grid">
+          <div class="start-copy">
+            <div class="eyebrow">A LENOX LIBRARY ACADEMIC GLOW-UP</div>
+            <h1>Your Academic<br><em>Reset Glow-Up.</em></h1>
+            <p class="lede">Six quick questions. One personalized upgrade. One thing you can actually fix before you leave the station.</p>
+            <button class="primary-btn editorial" id="start-btn">GET MY GLOW-UP <span>↗</span></button>
+            <p class="microcopy">No login. No score. Quiz answers are not tied to your identity.</p>
+          </div>
+
+          <aside class="start-side">
+            <div class="issue-no">ISSUE 01</div>
+            <div class="side-stat"><strong>90 sec</strong><span>to find your next move</span></div>
+            <div class="side-stat"><strong>3 min</strong><span>to make it real</span></div>
+            <div class="side-stat"><strong>1 reset</strong><span>completed before you go</span></div>
+            <div class="side-mantra">DO IT FOR<br>FUTURE YOU.</div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="quiz-screen" class="screen quiz-screen" aria-labelledby="question-title">
+        <div class="quiz-top">
+          <div class="progress-meta">
+            <span id="progress-label">01 / 06</span>
+            <span>YOUR RESET CHECK-IN</span>
+          </div>
+          <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+        </div>
+
+        <div class="question-layout">
+          <div class="question-index" id="question-index">01</div>
+          <div class="question-main">
+            <div class="question-kicker" id="question-kicker">START HERE</div>
+            <h2 id="question-title"></h2>
+            <div id="options" class="options"></div>
+          </div>
+        </div>
+
+        <div class="quiz-footer">
+          <button id="back-btn" class="text-btn" type="button">← BACK</button>
+          <span>Pick what feels most like you right now.</span>
+        </div>
+      </section>
+
+      <section id="result-screen" class="screen result-screen">
+        <article class="result-frame" id="result-frame">
+          <div class="result-topline">
+            <span>YOUR NEXT UPGRADE ↗</span>
+            <span>LENOX LIBRARY · ACADEMIC GLOW-UP 01</span>
+          </div>
+
+          <div class="result-copy">
+            <div class="result-number" id="result-number">01</div>
+            <h2 id="result-title"></h2>
+            <p id="result-tagline" class="result-tagline"></p>
+          </div>
+
+          <div class="result-accent-word" aria-hidden="true">RESET</div>
+
+          <div class="move-card">
+            <span class="move-label">TODAY'S MOVE</span>
+            <p id="result-move"></p>
+          </div>
+
+          <div class="result-payoff" id="result-payoff"></div>
+
+          <div class="signature">
+            <span>DO IT FOR FUTURE YOU.</span>
+            <span>LENOX LIBRARY ✦</span>
+          </div>
+        </article>
+
+        <section class="plan-panel" aria-labelledby="plan-heading">
+          <div class="plan-intro">
+            <div>
+              <div class="eyebrow">WHY THIS ONE</div>
+              <h3 id="plan-heading">Your reset, explained.</h3>
+            </div>
+            <p id="why-text" class="why-text"></p>
+          </div>
+
+          <div class="plan-columns">
+            <div class="plan-column">
+              <span class="small-label">TRY THIS THIS WEEK</span>
+              <ol id="quick-steps" class="quick-steps"></ol>
+            </div>
+            <div class="plan-column">
+              <span class="small-label">KEEP GOING WITH LENOX ↗</span>
+              <div id="resources" class="resources"></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="result-actions">
+          <button class="primary-btn editorial" id="show-how-btn">DO THE 3-MINUTE RESET <span>↗</span></button>
+          <div class="save-row email-only-row">
+            <button class="secondary-btn email-keep-btn" id="email-btn">
+              <span class="mail-icon" aria-hidden="true">✉</span>
+              <span>EMAIL MY GLOW-UP</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p class="privacy-note">Your email address is used only to deliver your result and is not written to the analytics log.</p>
+          <button class="text-btn centered" id="restart-btn">START OVER</button>
+        </div>
+      </section>
+
+      <section id="how-screen" class="screen how-screen">
+        <div class="reset-header">
+          <div class="eyebrow">3-MINUTE RESET</div>
+          <div class="reset-counter"><span id="reset-step-current">01</span><span>/03</span></div>
+        </div>
+
+        <div class="reset-stage">
+          <div class="reset-step-label" id="reset-step-label">START HERE</div>
+          <h2 id="reset-step-title"></h2>
+          <p id="reset-step-body" class="how-intro"></p>
+          <div id="reset-step-tip" class="how-callout"></div>
+          <button class="primary-btn editorial" id="reset-next-btn">GOT IT <span>↗</span></button>
+        </div>
+      </section>
+
+      <section id="complete-screen" class="screen complete-screen">
+        <div class="complete-inner">
+          <div class="eyebrow">RESET COMPLETE ✦</div>
+          <h2>Look<br><em>at you.</em></h2>
+          <p id="complete-message" class="complete-message"></p>
+          <div class="complete-meta">
+            <span>ONE MOVE MADE</span>
+            <span>ONE LESS THING LIVING IN YOUR HEAD</span>
+          </div>
+          <p class="lenox-signoff">ONE RESET DOWN. LENOX LIBRARY IS HERE FOR THE NEXT ONE. ✦</p>
+          <button class="primary-btn editorial" id="back-result-btn">KEEP MY GLOW-UP <span>↗</span></button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="send-dialog" class="email-dialog action-dialog">
+    <form id="send-form">
+      <button class="dialog-close" type="button" id="send-dialog-close" aria-label="Close">×</button>
+
+      <div class="send-sparkles" aria-hidden="true">
+        <span>✦</span><span>♡</span><span>✧</span>
+      </div>
+
+      <div class="eyebrow">KEEP THIS ONE ↗</div>
+      <h2>Email your<br><em>Glow-Up.</em></h2>
+      <p class="send-lede">Send your personalized result, 3-minute reset, and Lenox Library and UW–Whitewater Rock resources straight to your inbox.</p>
+
+      <label for="destination-input">YOUR EMAIL</label>
+      <div class="email-field-wrap">
+        <span class="field-icon" aria-hidden="true">✉</span>
+        <input id="destination-input" name="destination" type="email" autocomplete="email" inputmode="email" placeholder="you@example.edu" required />
+      </div>
+
+      <button type="submit" class="primary-btn editorial wide" id="send-now-btn">SEND MY GLOW-UP <span>↗</span></button>
+      <p id="send-status" class="email-status" role="status"></p>
+
+      <div class="send-fineprint">
+        <span aria-hidden="true">♡</span>
+        <span>Used only to send this message. Not saved to the Academic Glow-Up analytics log.</span>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
