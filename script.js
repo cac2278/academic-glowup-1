@@ -622,7 +622,7 @@ function shareHtml() {
                   <tr>
                     <td style="padding:16px 17px 5px 17px;font-family:Arial,sans-serif;">
                       <div style="font-size:20px;font-weight:900;color:#2d193d;">📚 YOUR LIBRARY HAS YOUR BACK <span style="color:#f05f8f;">≋</span></div>
-                      <div style="margin-top:5px;font-size:14px;line-height:1.45;color:#554b5d;">Bring your questions!.</div>
+                      <div style="margin-top:5px;font-size:14px;line-height:1.45;color:#554b5d;">Bring your questions!</div>
                     </td>
                   </tr>
                   <tr>
