@@ -306,3 +306,5 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:700;letter-spac
 }
 
 
+
+.page-restart-row{display:flex;justify-content:center;margin-top:18px}.complete-restart-row{justify-content:flex-start;margin-top:18px}.complete-restart-row .text-btn{color:var(--ink)}
