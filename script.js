@@ -622,7 +622,7 @@ function shareHtml() {
                   <tr>
                     <td style="padding:16px 17px 5px 17px;font-family:Arial,sans-serif;">
                       <div style="font-size:20px;font-weight:900;color:#2d193d;">📚 YOUR LIBRARY HAS YOUR BACK <span style="color:#f05f8f;">≋</span></div>
-                      <div style="margin-top:5px;font-size:14px;line-height:1.45;color:#554b5d;">Good questions belong here. So do half-formed ones.</div>
+                      <div style="margin-top:5px;font-size:14px;line-height:1.45;color:#554b5d;">Bring your questions!.</div>
                     </td>
                   </tr>
                   <tr>
@@ -631,7 +631,7 @@ function shareHtml() {
                     </td>
                   </tr>
                   <tr>
-                    <td style="padding:0 17px 14px 17px;font-family:Arial,sans-serif;text-align:right;font-size:13px;font-weight:900;color:#5b2a86;">✦ good questions belong here. ♡</td>
+                    <td style="padding:0 17px 14px 17px;font-family:Arial,sans-serif;text-align:right;font-size:13px;font-weight:900;color:#5b2a86;">✦ all questions belong here. ♡</td>
                   </tr>
                 </table>
               </td>
