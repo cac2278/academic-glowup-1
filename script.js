@@ -254,7 +254,7 @@ function showScreen(name) {
 
 // Shared-iPad privacy: if a visitor walks away mid-session, return the station
 // to a clean start screen after 90 seconds with no interaction.
-const KIOSK_IDLE_MS = 90 * 1000;
+const KIOSK_IDLE_MS = 10 * 60 * 1000;
 let lastActivityAt = Date.now();
 let kioskResetInProgress = false;
 
